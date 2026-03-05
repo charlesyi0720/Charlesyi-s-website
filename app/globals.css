@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-background text-foreground font-sans;
+}
+
+/* subtle noise texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='noStitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  z-index: -1;
+}
+
+.container-page {
+  @apply min-h-screen flex flex-col items-center justify-center px-6 md:px-16 lg:px-32 bg-background text-foreground;
+}
+
+.section {
+  @apply w-full max-w-4xl border-t border-subtle pt-8 mt-8;
+}
+
+.section-title {
+  @apply text-xs tracking-[0.3em] uppercase text-muted font-mono;
+}
+
+.section-body {
+  @apply mt-4 space-y-2 text-sm leading-relaxed text-muted font-mono;
+}
+
+.mono-label {
+  @apply text-[10px] uppercase tracking-[0.25em] text-muted font-mono;
+}
+
+.pill {
+  @apply inline-flex items-center rounded-full border border-subtle bg-surface/80 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-muted font-mono;
+}
+
+.card {
+  @apply bg-surface/80 border border-subtle rounded-xl px-6 py-5;
+}
