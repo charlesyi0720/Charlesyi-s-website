@@ -5,7 +5,7 @@ This is a minimal, academic-style single-page site built with Next.js (App Route
 ## Getting started
 
 ```bash
-npm install
+cd /Users/charlesyi/charles-portfolio
 npm run dev
 ```
 
