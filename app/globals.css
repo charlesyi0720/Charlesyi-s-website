@@ -3,27 +3,28 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
   @apply bg-background text-foreground font-sans;
 }
 
-/* subtle noise texture overlay */
+/* Research canvas: 1px grid every 40px, opacity 0.03 */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: 0.08;
-  mix-blend-mode: soft-light;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='noStitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
   z-index: -1;
+  background-image: linear-gradient(to right, #111111 1px, transparent 1px),
+    linear-gradient(to bottom, #111111 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.03;
 }
 
 .container-page {
-  @apply min-h-screen flex flex-col items-center justify-center px-6 md:px-16 lg:px-32 bg-background text-foreground;
+  @apply min-h-screen flex flex-col items-center px-6 md:px-16 lg:px-32 py-16 md:py-24 bg-background text-foreground;
 }
 
 .section {
@@ -43,9 +44,28 @@ body::before {
 }
 
 .pill {
-  @apply inline-flex items-center rounded-full border border-subtle bg-surface/80 px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-muted font-mono;
+  @apply inline-flex items-center rounded-full border border-subtle bg-surface px-3 py-1 text-[11px] uppercase tracking-[0.2em] text-muted font-mono;
 }
 
 .card {
-  @apply bg-surface/80 border border-subtle rounded-xl px-6 py-5;
+  @apply bg-surface border border-subtle rounded-xl px-6 py-5;
+}
+
+/* Reverse hover: black bg, white text on hover */
+.link-reverse-hover {
+  @apply inline-block px-1 -mx-1 py-0.5 text-foreground transition-colors duration-200 hover:bg-foreground hover:text-background;
+}
+
+/* Terminal scrolling log */
+.terminal-scroll {
+  animation: terminal-scroll 8s linear infinite;
+}
+
+@keyframes terminal-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
 }

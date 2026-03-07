@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const sections = {
   education: [
     {
@@ -19,96 +23,56 @@ const sections = {
         "Research Project: White-Collar Resilience under GenAI exposure: A Heterogeneous Analysis of Subjective Displacement Risk"
       ]
     }
-  ],
-  experience: [
-    {
-      title: "Management Consulting Intern",
-      place: "Australia–UK Chamber of Commerce · London, United Kingdom",
-      time: "Nov 2024 – Dec 2024",
-      bullets: [
-        "Designed the 2024 Chamber survey for current and past members (36 questions with complex piping logic).",
-        "Conducted market research on survey implementation, evaluated tools, and recommended a solution targeting a 40% response rate.",
-        "Implemented data analysis approaches to help interpret survey results and derive actionable insights for member services."
-      ]
-    }
-  ],
-  certifications: [
-    "ICAEW Certificate in Finance, Accounting and Business",
-    "Certification of Chartered Accountants in England and Wales — 10 / 15 exams passed"
-  ],
-  honours: ["ICAEW Global Business Challenge 2022 — Champion Team in China"],
-  projects: [
-    {
-      title: "Undergraduate Econometrics Capstone",
-      place: "The University of Melbourne · Melbourne, Victoria",
-      time: "Mar 2025 – May 2025",
-      bullets: [
-        "Estimated the impact of household electrification on income in Burkina Faso using OLS and two-stage least squares (2SLS).",
-        "Developed an end-to-end empirical pipeline in R (201 lines): data cleaning, instrument construction, model estimation, and robustness checks."
-      ]
-    }
-  ],
-  skills: [
-    "AI Productivity: Vibe Coding (Cursor, Claude Code, Gemini Pro API), Agentic workflows, Prompt engineering, AI-assisted full-stack development.",
-    "Econometrics & Causal Inference: OLS, 2SLS / IV, Difference-in-Differences (DiD).",
-    "R for data analysis, statistical modelling, and visualisation.",
-    "Languages: Mandarin (native), English (proficient)."
   ]
+};
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-48px" },
+  transition: { duration: 0.4 }
 };
 
 export default function Home() {
   return (
     <main className="container-page">
-      <section className="w-full max-w-4xl space-y-10">
-        {/* Hero */}
-        <header className="card flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div className="space-y-5">
-            <div className="pill">Curriculum Vitae</div>
-            <h1 className="text-4xl md:text-5xl tracking-tight font-sans">
-              Charles Yi
-            </h1>
-            <p className="max-w-xl text-xs md:text-sm leading-relaxed text-muted font-mono">
-              Economics Honours student @ The University of Melbourne · AI
-              Researcher & Developer ·{" "}
-              <a
-                href="https://www.icaew.com/learning-and-development/icaew-cfab"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-accent text-accent/80 transition-colors underline-offset-4 hover:underline"
-              >
-                ICAEW CFAB
-              </a>
-              .
-            </p>
-          </div>
-          <div className="space-y-2 text-[11px] text-right text-muted font-mono">
-            <div className="mono-label">Contact</div>
-            <div className="space-y-1">
-              <p>0435 171 436</p>
-              <p>
-                <a
-                  href="mailto:charlesyi66@outlook.com"
-                  className="hover:text-accent text-accent/80 transition-colors underline-offset-4 hover:underline"
-                >
-                  charlesyi66@outlook.com
-                </a>
-              </p>
-              <p>
-                <a
-                  href="https://www.linkedin.com/in/charles-yi-3b98612b6"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-accent text-accent/80 transition-colors underline-offset-4 hover:underline"
-                >
-                  linkedin.com/in/charles-yi-3b98612b6
-                </a>
-              </p>
-            </div>
-          </div>
-        </header>
+      <div className="w-full max-w-4xl space-y-20 md:space-y-28">
+        {/* Minimal header */}
+        <motion.header
+          className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
+          {...fadeInUp}
+        >
+          <h1 className="text-3xl md:text-4xl tracking-tight font-serif text-foreground">
+            Charles Yi
+          </h1>
+          <nav className="flex flex-wrap gap-x-6 gap-y-1 text-xs font-mono text-muted">
+            <a
+              href="mailto:charlesyi66@outlook.com"
+              className="link-reverse-hover"
+            >
+              Email
+            </a>
+            <a
+              href="https://www.linkedin.com/in/charles-yi-3b98612b6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-reverse-hover"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://www.icaew.com/learning-and-development/icaew-cfab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-reverse-hover"
+            >
+              ICAEW CFAB
+            </a>
+          </nav>
+        </motion.header>
 
-        {/* Education */}
-        <section className="section">
+        {/* Section 01: Education — UNCHANGED */}
+        <motion.section className="section" {...fadeInUp}>
           <h2 className="section-title">Education</h2>
           <div className="section-body space-y-4">
             {sections.education.map((entry) => (
@@ -139,109 +103,77 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </section>
+        </motion.section>
 
-        {/* Experience */}
-        <section className="section">
-          <h2 className="section-title">Experience</h2>
-          <div className="section-body space-y-4">
-            {sections.experience.map((role) => (
-              <div
-                key={role.title}
-                className="card flex flex-col justify-between gap-3 md:gap-4"
-              >
-                <div className="flex flex-col justify-between gap-1 md:flex-row md:gap-8">
-                  <div className="space-y-1">
-                    <p className="text-sm font-medium text-foreground font-sans">
-                      {role.title}
-                    </p>
-                    <p className="text-xs text-muted font-mono">
-                      {role.place}
-                    </p>
-                  </div>
-                  <div className="text-[11px] text-muted md:text-right font-mono">
-                    <p>{role.time}</p>
-                  </div>
-                </div>
-                <ul className="mt-1 space-y-1 text-[11px] text-muted font-mono md:max-w-md md:ml-auto">
-                  {role.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
+        {/* Section 02: Economics Research Project (In Progress) */}
+        <motion.section className="section" {...fadeInUp}>
+          <h2 className="section-title font-mono">
+            02 / Economics Research Project
+          </h2>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-foreground font-sans">
+            Analyzing the causal impact of GenAI exposure on white-collar
+            resilience, non-cognitive capital, and displacement risk.
+          </p>
+          <p className="mt-1 text-[11px] uppercase tracking-widest text-muted font-mono">
+            In Progress
+          </p>
+          <div className="mt-8 min-h-[280px] rounded-lg border border-subtle bg-surface/50 flex items-center justify-center">
+            <p className="text-xs font-mono text-muted">
+              [ Placeholder: interactive research graph ]
+            </p>
+          </div>
+        </motion.section>
+
+        {/* Section 03: Equi */}
+        <motion.section className="section" {...fadeInUp}>
+          <h2 className="section-title font-mono">03 / Equi Project</h2>
+          <div className="mt-6 space-y-6 max-w-2xl">
+            <div>
+              <p className="text-[11px] uppercase tracking-widest text-muted font-mono mb-2">
+                The Goal
+              </p>
+              <p className="text-sm leading-relaxed text-foreground font-sans">
+                Ending decision fatigue. Equi is a personal resource scheduling
+                engine designed to liberate human cognitive bandwidth from
+                logistical friction and task prioritization.
+              </p>
+            </div>
+            <div>
+              <p className="text-[11px] uppercase tracking-widest text-muted font-mono mb-2">
+                The Means
+              </p>
+              <p className="text-sm leading-relaxed text-foreground font-sans">
+                Powered by an AI Multi-Agent System (MAS) that autonomously
+                handles complex scheduling and resource allocation, allowing the
+                user to focus solely on high-value decision-making.
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 rounded-lg border border-foreground/20 bg-white p-4 shadow-sm max-w-xl">
+            <div className="border border-foreground/15 rounded bg-[#FAFAFA] overflow-hidden font-mono text-[11px] text-foreground">
+              <div className="border-b border-foreground/15 px-3 py-2 text-muted">
+                MAS Engine Status
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Academic Projects */}
-        <section className="section">
-          <h2 className="section-title">Academic Projects</h2>
-          <div className="section-body space-y-4">
-            {sections.projects.map((p) => (
-              <div
-                key={p.title}
-                className="card flex flex-col justify-between gap-3 md:gap-4"
-              >
-                <div className="flex flex-col justify-between gap-1 md:flex-row md:gap-8">
-                  <div className="space-y-1">
-                    <p className="text-[13px] text-muted font-mono">
-                      {p.title}
-                    </p>
-                    <p className="text-xs text-muted font-mono">
-                      {p.place}
-                    </p>
+              <div className="relative h-32 overflow-hidden">
+                <div className="terminal-scroll absolute inset-0 px-3 py-2 space-y-1">
+                  <div className="text-muted">&gt; initializing agents...</div>
+                  <div className="text-muted">&gt; scheduler active</div>
+                  <div className="text-foreground font-medium">
+                    MAS Engine Status: Active
                   </div>
-                  <div className="text-[11px] text-muted md:text-right font-mono">
-                    <p>{p.time}</p>
+                  <div className="text-muted">&gt; awaiting user input</div>
+                  <div className="text-muted">&gt; initializing agents...</div>
+                  <div className="text-muted">&gt; scheduler active</div>
+                  <div className="text-foreground font-medium">
+                    MAS Engine Status: Active
                   </div>
+                  <div className="text-muted">&gt; awaiting user input</div>
                 </div>
-                <ul className="mt-1 space-y-1 text-[11px] text-muted font-mono md:max-w-md md:ml-auto">
-                  {p.bullets.map((b) => (
-                    <li key={b}>{b}</li>
-                  ))}
-                </ul>
               </div>
-            ))}
+            </div>
           </div>
-        </section>
-
-        {/* Skills */}
-        <section className="section pb-12">
-          <h2 className="section-title">Technical Skills</h2>
-          <div className="section-body">
-            <ul className="card space-y-1 text-[11px] text-muted font-mono">
-              {sections.skills.map((s) => (
-                <li key={s}>{s}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* Certifications */}
-        <section className="section pb-12">
-          <h2 className="section-title">Professional Certifications</h2>
-          <div className="section-body">
-            <ul className="card space-y-1 text-[11px] text-muted font-mono">
-              {sections.certifications.map((c) => (
-                <li key={c}>{c}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-
-        {/* Honours & Awards */}
-        <section className="section pb-12">
-          <h2 className="section-title">Honours & Awards</h2>
-          <div className="section-body">
-            <ul className="card space-y-1 text-[11px] text-muted font-mono">
-              {sections.honours.map((h) => (
-                <li key={h}>{h}</li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      </section>
+        </motion.section>
+      </div>
     </main>
   );
 }
-
