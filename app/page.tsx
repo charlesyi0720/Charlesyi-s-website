@@ -69,7 +69,16 @@ export default function Home() {
             </h1>
             <p className="max-w-xl text-xs md:text-sm leading-relaxed text-muted font-mono">
               Economics Honours student @ The University of Melbourne · AI
-              Researcher & Developer · ICAEW CFAB.
+              Researcher & Developer ·{" "}
+              <a
+                href="https://www.icaew.com/learning-and-development/icaew-cfab"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-accent text-accent/80 transition-colors underline-offset-4 hover:underline"
+              >
+                ICAEW CFAB
+              </a>
+              .
             </p>
           </div>
           <div className="space-y-2 text-[11px] text-right text-muted font-mono">
