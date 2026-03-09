@@ -55,17 +55,3 @@ body::before {
 .link-reverse-hover {
   @apply inline-block px-1 -mx-1 py-0.5 text-foreground transition-colors duration-200 hover:bg-foreground hover:text-background;
 }
-
-/* Terminal scrolling log */
-.terminal-scroll {
-  animation: terminal-scroll 8s linear infinite;
-}
-
-@keyframes terminal-scroll {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
