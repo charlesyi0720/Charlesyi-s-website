@@ -132,37 +132,47 @@ export default function Home() {
 
           {/* Headline */}
           <h3 className="mt-6 text-2xl md:text-3xl font-serif text-foreground leading-tight">
-            Equi <span className="text-muted">|</span> The AI-Native Decision Engine
+            Equi <span className="text-muted">|</span> The AI-Native Lifestyle Architect
           </h3>
 
           <div className="mt-8 space-y-8 max-w-2xl">
-            {/* The Problem */}
+            {/* The Generic Task Trap */}
             <div>
               <p className="text-[11px] uppercase tracking-[0.25em] text-muted font-bold font-mono mb-2">
-                The Problem
+                The Generic Task Trap
               </p>
               <p className="text-sm leading-relaxed text-foreground font-sans">
-                Modern knowledge workers face unprecedented decision fatigue. The average professional makes over 35,000 decisions daily—most trivial, yet collectively draining cognitive bandwidth that could be directed toward meaningful work.
+                Current AI assistants treat every interaction as a blank slate. They lack continuity, context, and genuine understanding of the individual's unique life patterns, preferences, and goals.
               </p>
             </div>
 
-            {/* The Vision */}
+            {/* Long-term Memory & Understanding */}
             <div>
               <p className="text-[11px] uppercase tracking-[0.25em] text-muted font-bold font-mono mb-2">
-                The Vision
+                Long-term Memory & Understanding
               </p>
               <p className="text-sm leading-relaxed text-foreground font-sans">
-                Equi aims to end decision fatigue by neutralizing the logistical entropy of modern work-life.
+                Equi builds a persistent cognitive model of the user over time—learning communication styles, energy patterns, priorities, and relationships to anticipate needs before they arise.
               </p>
             </div>
 
-            {/* Technical Moat */}
+            {/* Dynamic Scheduling */}
             <div>
               <p className="text-[11px] uppercase tracking-[0.25em] text-muted font-bold font-mono mb-2">
-                Technical Moat
+                Dynamic Scheduling
               </p>
               <p className="text-sm leading-relaxed text-foreground font-sans">
-                Built on an Autonomous Multi-Agent System (MAS) that independently handles task prioritization, calendar optimization, and logistical friction—freeing human cognition for high-value decisions.
+                Beyond simple calendar management, Equi dynamically restructures the user's day based on real-time context—energy levels, unexpected events, and shifting priorities.
+              </p>
+            </div>
+
+            {/* Personality & Emotional Value */}
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.25em] text-muted font-bold font-mono mb-2 italic">
+                Personality & Emotional Value
+              </p>
+              <p className="text-sm leading-relaxed text-foreground font-serif italic">
+                Equi evolves into a genuine partner—not a tool. It remembers what matters to you, celebrates your wins, and provides thoughtful guidance rooted in understanding, not just data.
               </p>
             </div>
           </div>
@@ -173,7 +183,7 @@ export default function Home() {
               href="#"
               className="inline-flex items-center gap-2 text-sm font-mono text-foreground border-b border-foreground/30 pb-0.5 hover:border-foreground hover:text-foreground transition-colors duration-200"
             >
-              Request Early Access / Whitepaper
+              Experience the Future of Agency
               <span className="text-lg">→</span>
             </a>
           </div>
