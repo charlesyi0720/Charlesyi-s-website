@@ -129,10 +129,54 @@ export default function Home() {
         {/* Section 03: Equi */}
         <motion.section className="section" {...fadeInUp}>
           <h2 className="section-title font-mono">03 / Equi Project</h2>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-foreground font-sans">
-            Ending decision fatigue through an AI Multi-Agent System (MAS) that
-            autonomously handles logistical friction.
-          </p>
+
+          {/* Headline */}
+          <h3 className="mt-6 text-2xl md:text-3xl font-serif text-foreground leading-tight">
+            Equi <span className="text-muted">|</span> The AI-Native Decision Engine
+          </h3>
+
+          <div className="mt-8 space-y-8 max-w-2xl">
+            {/* The Problem */}
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.25em] text-muted font-bold font-mono mb-2">
+                The Problem
+              </p>
+              <p className="text-sm leading-relaxed text-foreground font-sans">
+                Modern knowledge workers face unprecedented decision fatigue. The average professional makes over 35,000 decisions daily—most trivial, yet collectively draining cognitive bandwidth that could be directed toward meaningful work.
+              </p>
+            </div>
+
+            {/* The Vision */}
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.25em] text-muted font-bold font-mono mb-2">
+                The Vision
+              </p>
+              <p className="text-sm leading-relaxed text-foreground font-sans">
+                Equi aims to end decision fatigue by neutralizing the logistical entropy of modern work-life.
+              </p>
+            </div>
+
+            {/* Technical Moat */}
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.25em] text-muted font-bold font-mono mb-2">
+                Technical Moat
+              </p>
+              <p className="text-sm leading-relaxed text-foreground font-sans">
+                Built on an Autonomous Multi-Agent System (MAS) that independently handles task prioritization, calendar optimization, and logistical friction—freeing human cognition for high-value decisions.
+              </p>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-10">
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 text-sm font-mono text-foreground border-b border-foreground/30 pb-0.5 hover:border-foreground hover:text-foreground transition-colors duration-200"
+            >
+              Request Early Access / Whitepaper
+              <span className="text-lg">→</span>
+            </a>
+          </div>
         </motion.section>
       </div>
     </main>
