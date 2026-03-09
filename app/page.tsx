@@ -108,21 +108,73 @@ export default function Home() {
         {/* Section 02: Economics Research Project (In Progress) */}
         <motion.section className="section" {...fadeInUp}>
           <h2 className="section-title font-mono">
-            02 / The Resilience of Australian White-Collar Workers
+            02 / Research
           </h2>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-foreground font-sans">
-            Analyzing the causal impact of GenAI exposure on white-collar
-            resilience, non-cognitive capital, and displacement risk.
+
+          {/* Title & Subtitle */}
+          <h3 className="mt-6 text-xl md:text-2xl font-bold text-foreground font-sans leading-tight">
+            The Resilience of Australian White-Collar Workers
+          </h3>
+          <p className="mt-2 text-sm text-muted font-sans leading-relaxed">
+            Assessing the Causal Impact of GenAI Exposure on Job Security
           </p>
-          <p className="mt-1 text-[11px] uppercase tracking-widest text-muted font-mono">
+
+          {/* Status Tag */}
+          <p className="mt-3 text-[11px] uppercase tracking-widest text-muted font-mono">
             In Progress
           </p>
-          <div className="mt-8 w-full">
-            <img
-              src="/research-poster.png"
-              alt="Research poster on white-collar resilience under GenAI exposure"
-              className="w-full h-auto rounded-lg border border-black/10 shadow-sm"
-            />
+
+          {/* Research Points - Grid Layout */}
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 max-w-3xl">
+            {/* The Cognitive Gap */}
+            <div className="border-l border-black/10 pl-5">
+              <p className="text-sm font-bold text-foreground font-sans">
+                The Cognitive Gap
+              </p>
+              <p className="mt-2 text-sm text-muted font-sans leading-relaxed">
+                GenAI reduces routine cognitive load but increases demand for higher-order skills. Workers with limited adaptive capacity face heightened displacement risk.
+              </p>
+            </div>
+
+            {/* The Resilience Matrix */}
+            <div className="border-l border-black/10 pl-5">
+              <p className="text-sm font-bold text-foreground font-sans">
+                The Resilience Matrix
+              </p>
+              <p className="mt-2 text-sm text-muted font-sans leading-relaxed">
+                A multidimensional framework capturing non-cognitive capital—adaptability, learning orientation, emotional regulation—as key buffers against algorithmic displacement.
+              </p>
+            </div>
+
+            {/* Causal Forest / GRF */}
+            <div className="border-l border-black/10 pl-5">
+              <p className="text-sm font-bold text-foreground font-sans">
+                Causal Forest <span className="font-mono text-xs text-foreground/60">&</span> GRF
+              </p>
+              <p className="mt-2 text-sm text-muted font-sans leading-relaxed">
+                Employing <code className="font-mono text-xs bg-black/5 px-1 py-0.5">Causal Forest</code> and <code className="font-mono text-xs bg-black/5 px-1 py-0.5">GRF</code> to estimate <code className="font-mono text-xs bg-black/5 px-1 py-0.5">CATE</code>—heterogeneous treatment effects across occupation, industry, and skill profiles.
+              </p>
+            </div>
+
+            {/* The Awareness Gap */}
+            <div className="border-l border-black/10 pl-5">
+              <p className="text-sm font-bold text-foreground font-sans">
+                The Awareness Gap
+              </p>
+              <p className="mt-2 text-sm text-muted font-sans leading-relaxed">
+                Many workers underestimate their exposure to GenAI-driven automation. This misperception correlates with weaker upskilling effort and lower resilience.
+              </p>
+            </div>
+
+            {/* Targeted Intervention */}
+            <div className="border-l border-black/10 pl-5 md:col-span-2">
+              <p className="text-sm font-bold text-foreground font-sans">
+                Targeted Intervention
+              </p>
+              <p className="mt-2 text-sm text-muted font-sans leading-relaxed">
+                Translating heterogeneity in <code className="font-mono text-xs bg-black/5 px-1 py-0.5">CATE</code> estimates into actionable policy—identifying high-risk segments for tailored re-skilling programs.
+              </p>
+            </div>
           </div>
         </motion.section>
 
