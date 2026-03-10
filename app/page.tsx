@@ -194,7 +194,7 @@ export default function Home() {
                 The Checklist Treadmill
               </p>
               <p className="text-sm leading-relaxed text-foreground font-sans">
-                The traditional to-do list is a <span className="italic">fragmented void</span>—an endless treadmill of tasks that yield <span className="italic">empty achievement</span>. Without优先级 logic or understanding of human context, we mistake <span className="italic">busyness</span> for productivity. Most AI assistants suffer from <span className="font-mono text-xs">Contextual Amnesia</span>: they forget who you are, what matters to you, and why each task exists. Equi exists to eliminate this productivity emptiness—restoring <span className="italic">meaningful productivity</span> through persistent understanding.
+                The traditional to-do list is a fragmented void—an endless treadmill of tasks that yield empty achievement. Without priority logic or understanding of human context, we mistake busyness for productivity. Most AI assistants suffer from Contextual Amnesia: they forget who you are, what matters to you, and why each task exists. Equi exists to eliminate this productivity emptiness—restoring meaningful productivity through persistent understanding.
               </p>
             </div>
 
