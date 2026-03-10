@@ -220,10 +220,10 @@ export default function Home() {
 
             {/* Personality & Emotional Value */}
             <div>
-              <p className="text-[11px] uppercase tracking-[0.25em] text-muted font-bold font-mono mb-2 italic">
+              <p className="text-[11px] uppercase tracking-[0.25em] text-muted font-bold font-mono mb-2">
                 Personality & Emotional Value
               </p>
-              <p className="text-sm leading-relaxed text-foreground font-serif italic">
+              <p className="text-sm leading-relaxed text-foreground font-sans">
                 Equi evolves into a genuine partner—not a tool. It remembers what matters to you, celebrates your wins, and provides thoughtful guidance rooted in understanding, not just data.
               </p>
             </div>
