@@ -188,13 +188,13 @@ export default function Home() {
           </h3>
 
           <div className="mt-8 space-y-8 max-w-2xl">
-            {/* The Generic Task Trap */}
+            {/* The Checklist Treadmill */}
             <div>
               <p className="text-[11px] uppercase tracking-[0.25em] text-muted font-bold font-mono mb-2">
-                The Generic Task Trap
+                The Checklist Treadmill
               </p>
               <p className="text-sm leading-relaxed text-foreground font-sans">
-                Current AI assistants treat every interaction as a blank slate. They lack continuity, context, and genuine understanding of the individual's unique life patterns, preferences, and goals.
+                The traditional to-do list is a <span className="italic">fragmented void</span>—an endless treadmill of tasks that yield <span className="italic">empty achievement</span>. Without优先级 logic or understanding of human context, we mistake <span className="italic">busyness</span> for productivity. Most AI assistants suffer from <span className="font-mono text-xs">Contextual Amnesia</span>: they forget who you are, what matters to you, and why each task exists. Equi exists to eliminate this productivity emptiness—restoring <span className="italic">meaningful productivity</span> through persistent understanding.
               </p>
             </div>
 
