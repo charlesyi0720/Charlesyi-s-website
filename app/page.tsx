@@ -232,7 +232,7 @@ export default function Home() {
           {/* CTA */}
           <div className="mt-10">
             <a
-              href="https://equi-fi2md9g33-charlesyi0720s-projects.vercel.app/equi/onboarding"
+              href="https://equi-charlesyi0720s-projects.vercel.app"
               className="inline-flex items-center gap-2 text-sm font-mono text-foreground border-b border-foreground/30 pb-0.5 hover:border-foreground hover:text-foreground transition-colors duration-200"
             >
               Experience the Future of Agency
